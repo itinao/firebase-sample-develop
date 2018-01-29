@@ -1,0 +1,29 @@
+{
+  "name": "firebase-sample-develop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-app": "cd \"app/\" && npm i",
+    "install-functions": "cd \"functions/\" && npm i",
+    "postinstall": "npm run install-app && npm run install-functions",
+    "next": "cd \"app\" && npm run dev",
+    "preserve": "npm run build-all",
+    "serve": "firebase serve",
+    "predeploy": "npm run build-all",
+    "deploy": "firebase deploy",
+    "build-all": "npm run build-next && npm run build-firebase",
+    "build-next": "cd \"app\" && npm i && npm run build",
+    "build-firebase": "cd \"functions\" && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itinao/firebase-sample-develop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itinao/firebase-sample-develop/issues"
+  },
+  "homepage": "https://github.com/itinao/firebase-sample-develop#readme"
+}
