@@ -1,6 +1,22 @@
-export default (props) =>
-  <div>
-    <style jsx>{`
+import React from 'react'
+import PropTypes from 'prop-types';
+import firebase from 'firebase'
+
+export default class Balloon extends React.Component
+{
+  constructor (props)
+  {
+    super(props)
+  }
+
+  render()
+  {
+    const user = firebase.auth().currentUser;
+    const userType = user.uid === this.props.uid ? "my" : "other";
+
+    return (
+<div>
+  <style jsx>{`
 $my-balloon-color: #85FF49;
 $other-balloon-color: #FFFFFF;
 
@@ -87,13 +103,23 @@ $other-balloon-color: #FFFFFF;
     }
   }
 }
-    `}</style>
+  `}</style>
 
-    <div className={ "conversation-balloon " + props.userType }>
-  	  <div className="avatar">
-        <img src={ props.imgPath } />
-        <p className="name">{ props.name }</p>
-      </div>
-      <p className="message">{ props.message }</p>
+  <div className={"conversation-balloon " + userType}>
+	  <div className="avatar">
+      <img src={user.photoURL} />
+      <p className="name">{this.props.name}</p>
     </div>
+    <p className="message">{this.props.text}</p>
   </div>
+</div>
+    )
+  }
+}
+
+Balloon.propTypes = {
+  id: PropTypes.number,
+  uid: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+}
