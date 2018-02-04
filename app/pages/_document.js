@@ -18,6 +18,7 @@ export default class MyDocument extends Document
     <title>This page has title</title>
     <meta charSet='utf-8' />
     <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+    <link rel="manifest" href="static/manifest.json" />
     <style jsx>{`
 /* base */
 body {
