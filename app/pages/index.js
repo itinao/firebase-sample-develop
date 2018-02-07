@@ -15,7 +15,7 @@ export default class Index extends React.Component
     }
   }
 
-  componentWillMount ()
+  componentDidMount ()
   {
     firebase.initializeApp(clientCredentials)
 
