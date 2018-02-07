@@ -1,7 +1,7 @@
 import React from 'react'
 import firebase from 'firebase'
-import clientCredentials from '../credentials/client'
 
+import clientCredentials from '../credentials/client'
 import Chat from '../components/Chat'
 
 export default class Index extends React.Component
@@ -15,7 +15,7 @@ export default class Index extends React.Component
     }
   }
 
-  componentDidMount ()
+  componentWillMount ()
   {
     firebase.initializeApp(clientCredentials)
 
