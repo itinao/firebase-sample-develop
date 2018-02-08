@@ -9,10 +9,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "firebase": "^4.9.1",
     "firebase-admin": "^5.8.1",
     "firebase-functions": "^0.8.1",
     "next": "^4.2.3",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "superagent": "^3.8.2"
   }
 }

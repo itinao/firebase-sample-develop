@@ -2,7 +2,6 @@
   "name": "firebase-sample-develop",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "install-app": "cd \"app/\" && npm i",
     "install-functions": "cd \"functions/\" && npm i",
