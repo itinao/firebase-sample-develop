@@ -1,7 +1,7 @@
 import React from 'react'
 import firebase from 'firebase'
 
-import Request from '../Utils/Request'
+import Request from '../utils/Request'
 
 export default class ChatForm extends React.Component
 {

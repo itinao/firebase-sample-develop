@@ -3,16 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "install-app": "cd \"app/\" && npm i",
     "install-functions": "cd \"functions/\" && npm i",
-    "postinstall": "npm run install-app && npm run install-functions",
-    "next": "cd \"app\" && npm run dev",
+    "postinstall": "npm run install-functions",
+    "next": "cd \"functions\" && npm run dev",
     "preserve": "npm run build-all",
     "serve": "firebase serve --only functions,hosting",
     "predeploy": "npm run build-all",
     "deploy": "firebase deploy",
     "build-all": "npm run build-next && npm run build-firebase",
-    "build-next": "cd \"app\" && npm i && npm run build",
+    "build-next": "cd \"functions\" && npm i && npm run build",
     "build-firebase": "cd \"functions\" && npm i"
   },
   "repository": {

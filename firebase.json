@@ -6,6 +6,14 @@
         "source": "**/**",
         "function": "next"
       }
+    ],
+    "ignore": [
+      "**/.*",
+      "**/node_modules/**",
+      "functions/pages",
+      "functions/utils",
+      "functions/components",
+      "functions/credentials"
     ]
   },
   "functions": {
